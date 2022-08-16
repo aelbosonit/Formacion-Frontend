@@ -1,0 +1,89 @@
+<!-- You should have a page title in an h1 element with an id of title
+You should have a short explanation in a p element with an id of description
+You should have a form element with an id of survey-form
+Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text
+Inside the form element, you are required to enter your email in an input field that has an id of email
+If you enter an email that is not formatted correctly, you will see an HTML5 validation error
+Inside the form, you can enter a number in an input field that has an id of number
+If you enter non-numbers in the number input, you will see an HTML5 validation error
+If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error
+For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
+For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field
+Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from
+Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute
+Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
+Inside the form element, you are presented with a textarea for additional comments
+Inside the form element, you are presented with a button with id of submit to submit all the inputs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Survery Form</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title">Andrés Survey Form</h1>
+      <p id="description">To improve your knowledge</p>
+    </header>
+    <form class="" id="survey-form" action="index.html" method="post">
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" id="name" name="name" value="" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" id="email" name="email" value="" placeholder="Enter your Email" required>
+      </div>
+
+      <div class="form-group">
+        <label id="number-label" for="number">Age (optional)</label>
+        <input type="number" id="number" name="number" placeholder="Age" min="10" max="99">
+      </div>
+
+      <div class="form-group">
+        <label for="dropdown">Current role</label>
+        <select class="" id="dropdown" name="dropdown">
+          <option value="Student">Student</option>
+          <option value="Full time job">Full time job</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>Recommend Survey Form</p>
+        <input type="radio" id="definitely" name="chkbx" value="Definitely">
+        <label for="definitely">Definitely</label><br>
+        <input type="radio" id="maybe" name="chkbx" value="Maybe">
+        <label for="maybe">Maybe</label><br>
+        <input type="radio" id="not_sure" name="chkbx" value="Not sure">
+        <label for="not_sure">Not sure</label>
+      </div>
+
+      <div class="form-group">
+        <p>What would you like to improve? (Check all that apply)</p>
+        <input type="checkbox" id="front" name="checkbox" value="front"><label for="front">Front-end</label><br>
+        <input type="checkbox" id="back" name="checkbox" value="back"><label for="back">Back-end</label><br>
+        <input type="checkbox" id="git" name="checkbox" value="git"><label for="git">Git</label><br>
+        <input type="checkbox" id="data" name="checkbox" value="data"><label for="data">Data</label><br><br>
+      </div>
+
+      <div class="form-group">
+        <label for="txtarea">Any suggestions?</label><br>
+        <textarea name="txtarea" id="txtarea" rows="8" cols="40" placeholder="Enter your comment here"></textarea><br>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" id="submit" name="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
