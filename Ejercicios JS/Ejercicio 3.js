@@ -1,3 +1,8 @@
+/*
+Dado un array de ciudades, sacar todas las ciudades de España 
+que no sean capitales
+*/
+
 const arrCities = [
     { city: 'Logroño', country: 'Spain', capital: false },
     { city: 'Paris', country: 'France', capital: true },

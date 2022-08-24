@@ -1,3 +1,7 @@
+/*
+Dado un array de objetos, obtener el objeto con el id 3
+*/
+
 const arrNames = [
     { id: 1, name: 'Pepe' },
     { id: 2, name: 'Juan' },
