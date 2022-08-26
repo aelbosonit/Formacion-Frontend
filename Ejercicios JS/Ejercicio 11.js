@@ -13,7 +13,7 @@ function splitArrayIntoChunks(arr, num) {
     for (let i = 0; i < arr.length; i++) { //Recorro todo el array
         sub.push(arr[i]); //Y voy añadiendo a un sub-array los valores
         if (sub.length === num) { //Cuando el sub-array tenga el mismo tamaño que el número que me pasan
-            container.push(sub); //Lo meto en el contenedor, que será lo que devuelva
+            container.push(sub); //Lo meto en el contenedor, que será lo que devuelva en el return
             sub = []; //Y dejo el sub-array vacío, para poder meter valores nuevos
         } else if (container.length === pieces) { //En caso de que el contenedor tenga el tamaño de pieces
             container.push(sub); //Añado los valores que faltan al contenedor (si no pongo esto no se añaden los últimos valores)
@@ -22,5 +22,5 @@ function splitArrayIntoChunks(arr, num) {
     return container;
 }
 
-const result = splitArrayIntoChunks([1, 2, 3, 4, 5, 6, 7], 6);
+const result = splitArrayIntoChunks([1, 2, 3, 4, 5, 6, 7], 3);
 console.log(result);//[[1,2,3],[4,5,6],[7]]
