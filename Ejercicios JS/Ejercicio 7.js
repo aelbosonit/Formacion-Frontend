@@ -11,7 +11,7 @@ La función debe tener dos parámetros:
 function returnFalsyValues(obj, func) {
     for (const key in obj) { //Recorro todo el objeto
         const element = obj[key]; //Guardo el valor de la llave en ese momento
-        if (func(element) === true) { //Le paso a la función el valor de la propiedad/llave
+        if (func(element)) { //Le paso a la función el valor de la propiedad/llave
             delete obj[key]; //Si es true borra el atributo completo
         }
     }

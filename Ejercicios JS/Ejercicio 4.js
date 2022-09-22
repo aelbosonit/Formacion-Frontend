@@ -16,6 +16,6 @@ for (let i = 0; i < arrNumber1.length; i++) {
             }
         }
     }
-}
+} //some
 
 console.log(intersection);

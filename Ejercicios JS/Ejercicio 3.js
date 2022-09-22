@@ -14,10 +14,9 @@ const arrCities = [
 
 const noCapital = [];
 
-arrCities.forEach(element => {
-    if(element.capital === false) {
-        noCapital.push(element);
-    }
-});
+arrCities.filter(element => (
+    !element.capital
+
+)); //filter
 
 console.log(noCapital);

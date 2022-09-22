@@ -21,6 +21,6 @@ arrCities.forEach(element => {
     if(element.capital === false) {
         result.push(element)
     }
-});
+}); //filter
 
 console.log(result);
