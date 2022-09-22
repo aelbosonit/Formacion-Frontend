@@ -1,0 +1,34 @@
+<h1>Buscador de universidades</h1>
+
+<div class="row">
+    
+    <div class="col">
+        <!-- Botón que recorre los países por defecto y los formatea mediante un pipe
+             Al dar click en algún país, llama a la función pasando el país (que recorre el for) respectivo
+             Cuando se pulsa en un país, ese obtiene una clase para resaltar que está marcado
+        -->
+        <button 
+            *ngFor="let country of defaultCountries"
+            (click)="activateCountry(country)"
+            [class.active-region]="country === activeCountry"
+        >
+            {{country | titlecase}}
+        </button>
+        <!-- Llamada a componente input, al cual se le pasa las sugerencias -->
+        <app-search-input (onDebounce)="suggestions($event)"></app-search-input>
+        <!-- Si hay alguna sugerencia para mostrar, muestrála. En caso contrario muestra el template #region -->
+        <ul *ngIf="showSuggested; else region">
+            <li *ngFor="let country of suggestedCountries"><br> <!-- Recorre los países que hay al escribir (debounce) -->
+                {{country.name}}
+            </li>
+        </ul>
+        <!-- Necesario un template para ponerlo en el else de la condición -->
+        <ng-template #region>
+            <ul *ngFor="let country of countries"> <!-- Recorre los países que hay al dar click -->
+                <li>{{country.name}}</li>
+            </ul>
+        </ng-template>
+
+    </div>
+
+</div>

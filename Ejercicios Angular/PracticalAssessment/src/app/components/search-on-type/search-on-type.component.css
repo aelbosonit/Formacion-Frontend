@@ -1,0 +1,21 @@
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: #2980B9;
+    color: white;
+    border-color: #2980B9;
+    border: none;
+    padding: 1em;
+}
+
+.active-region {
+    cursor: pointer;
+    background-color: #1eb350;
+    color: white;
+    border-color: #2980B9;
+    border: none;
+    padding: 1em;
+}

@@ -1,0 +1,9 @@
+<!-- ngModel para tanto asignar un valor interno, como para modificar term interno 
+    Es necesario poner (input) para que coja letra a letra lo que se vaya escribiendo
+-->
+<input
+      [(ngModel)]="term"
+      (input)="pressedKey($event)" 
+      type="text"
+      name="term"
+/>
