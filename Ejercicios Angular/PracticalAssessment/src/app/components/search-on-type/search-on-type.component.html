@@ -17,16 +17,16 @@
         <!-- Llamada a componente input, al cual se le pasa las sugerencias -->
         <app-search-input (onDebounce)="suggestions($event)"></app-search-input>
         <!-- Si hay alguna sugerencia para mostrar, muestrála. En caso contrario muestra el template #region -->
-        <ul *ngIf="showSuggested; else region">
+        <div *ngIf="showSuggested; else region">
             <li *ngFor="let country of suggestedCountries"><br> <!-- Recorre los países que hay al escribir (debounce) -->
                 {{country.name}}
             </li>
-        </ul>
+        </div>
         <!-- Necesario un template para ponerlo en el else de la condición -->
         <ng-template #region>
-            <ul *ngFor="let country of countries"> <!-- Recorre los países que hay al dar click -->
+            <div *ngFor="let country of countries"><br>
                 <li>{{country.name}}</li>
-            </ul>
+            </div>
         </ng-template>
 
     </div>
