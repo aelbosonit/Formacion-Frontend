@@ -7,13 +7,15 @@ import { SearchOnTypeComponent } from './components/search-on-type/search-on-typ
 import { DisplayHideComponent } from './components/display-hide/display-hide.component';
 import { SearchInputComponent } from './components/search-on-type/search-input/search-input.component';
 import { FormsModule } from '@angular/forms';
+import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchOnTypeComponent,
     DisplayHideComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,

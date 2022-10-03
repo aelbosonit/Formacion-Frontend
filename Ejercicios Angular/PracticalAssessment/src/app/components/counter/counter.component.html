@@ -1,0 +1,18 @@
+<h1>{{counter.value}}</h1>
+
+<div class="row">
+    <p>Setup</p>
+    <button (click)="start()">start</button>
+    <button (click)="pause()">pause</button>
+    <button (click)="reset()">reset</button>
+
+    <p>Count</p>
+    <button (click)="countUp()">count up</button>
+    <button (click)="countDown()">count down</button>
+
+    <p>Set to</p>
+    <input type="number" id="set" [defaultValue]="0"/>
+
+    <p>Step</p>
+    <input type="number" id="step" [defaultValue]="2"/> {{counter.value}} {{counter | json}}
+</div>
