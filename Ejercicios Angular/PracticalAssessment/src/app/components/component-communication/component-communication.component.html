@@ -1,0 +1,19 @@
+<div class="parent">
+    <h3>PARENT</h3>
+    <p style="text-align: center">message: {{ childValue }}</p> <!-- Muestra el valor del hijo -->
+    <div class="container">
+        <button (click)="parentUseService()">Use Service</button>
+        <button (click)="parentUseInput()">Use Input Property</button>
+        <button (click)="parentUseSubject()">Use Observable</button>
+    </div>
+
+    <div class="child">
+        <app-child [inputChild]="parentValue" (onChildOutput)="parentCatchChildOutput($event)"></app-child>
+        <!-- LE PASAMOS EL VALOR DEL PADRE (parentValue) AL HIJO [inputChild] -->
+        <!-- [inputChild]: propiedad @Input del HIJO que RECIBE VALORES del PADRE / parentValue: valor del padre -> ESTO ENVÍA EL VALOR DEL PADRE AL INPUT DEL HIJO -->
+        
+        <!-- CADA VEZ QUE EL HIJO EMITA ALGO, LO VA A RECOGER LA FUNCIÓN -->
+        <!-- (onChildOutput): propiedad @Output del HIJO para cada vez que EMITA algún VALOR / parentCatchChildOutput($event): recoge lo que se emita mediante un evento -->    
+        <!-- SIEMPRE HAY QUE PONER ($event) PARA RECOGER LO QUE EMITE EL HIJO -->
+    </div>
+</div>

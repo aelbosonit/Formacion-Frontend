@@ -8,6 +8,8 @@ import { DisplayHideComponent } from './components/display-hide/display-hide.com
 import { SearchInputComponent } from './components/search-on-type/search-input/search-input.component';
 import { FormsModule } from '@angular/forms';
 import { CounterComponent } from './components/counter/counter.component';
+import { ComponentCommunicationComponent } from './components/component-communication/component-communication.component';
+import { ChildComponent } from './components/component-communication/child/child.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CounterComponent } from './components/counter/counter.component';
     SearchOnTypeComponent,
     DisplayHideComponent,
     SearchInputComponent,
-    CounterComponent
+    CounterComponent,
+    ComponentCommunicationComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
