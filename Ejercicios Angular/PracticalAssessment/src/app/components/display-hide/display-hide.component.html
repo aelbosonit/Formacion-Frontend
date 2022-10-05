@@ -1,1 +1,13 @@
-<p>display-hide works!</p>
+<h1>Hello World</h1>
+<button (click)="displayAndHide()">{{value}}</button>
+
+<div class="container">
+    <div class="showing" *ngIf="show; else nothing"> <!-- Si show es true, muestre el div, en caso contrario muestra el template vacío -->
+        <p>Hello World! 
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Earth_icon_2.png" alt="World Image">
+        </p>
+    </div>  
+    
+    <ng-template #nothing></ng-template> <!-- Template vacío -->
+    
+</div>
