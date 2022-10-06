@@ -1,0 +1,6 @@
+<div class="container">
+    <!-- Se le pasa al componente "traffic-light" la variable "active" y "selectedColor" -->
+    <app-traffic-light [inputActive]="active" [inputColor]="selectedColor"></app-traffic-light>
+    <!-- Cuando se emita algo del componente "controller" la función lo va a capturar como evento, que posteriormente asignará a sus valores internos -->
+    <app-controller (onActiveTraffic)="catchActiveTraffic($event)" (onSelectedColor)="catchSelectedColor($event)"></app-controller>
+</div>

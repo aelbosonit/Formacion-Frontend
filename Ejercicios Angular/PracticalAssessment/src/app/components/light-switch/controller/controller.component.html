@@ -1,0 +1,17 @@
+<div class="controller">
+
+    <h2 style="text-decoration: underline;">Controlador</h2>
+    <div class="functionality">
+        <select #colores (change)="onSelected(colores.value)"> <!-- #colores como referencia interna para poder coger con (change) su valor -> colores.value -->
+            <option value="rojo">rojo</option>
+            <option value="amarillo">amarillo</option>
+            <option value="verde">verde</option>
+        </select>
+    
+        <label class="checkbox">
+            <input type="checkbox" id="checked" (click)="activateTraffic()"> <p [class.active]="active">Encendido</p> <p>/</p> <p [class.active]="!active">Apagado</p>
+                                                                                <!-- Cuando se pulse, se activa una clase que lo pone en negrita -->
+        </label>
+    </div>
+    
+</div>

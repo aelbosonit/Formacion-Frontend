@@ -1,0 +1,9 @@
+<div class="traffic-light">
+    <!-- Cuando el semáforo esté activo, y además sea de un color, muestra la imagen del color -->
+    <img *ngIf="inputActive && inputColor === 'rojo'" class="lights red" src="./assets/red_light.png">
+    <img *ngIf="inputActive && inputColor === 'amarillo'" class="lights yellow" src="./assets/yellow_light.webp">
+    <img *ngIf="inputActive && inputColor === 'verde'" class="lights green" src="./assets/green_light.png">
+    
+    <img src="./assets/traffic_light.png" class="traffic" alt="Traffic light">
+
+</div>

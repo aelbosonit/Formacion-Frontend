@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { CounterComponent } from './components/counter/counter.component';
 import { ComponentCommunicationComponent } from './components/component-communication/component-communication.component';
 import { ChildComponent } from './components/component-communication/child/child.component';
+import { LightSwitchComponent } from './components/light-switch/light-switch.component';
+import { ControllerComponent } from './components/light-switch/controller/controller.component';
+import { TrafficLightComponent } from './components/light-switch/traffic-light/traffic-light.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ChildComponent } from './components/component-communication/child/child
     SearchInputComponent,
     CounterComponent,
     ComponentCommunicationComponent,
-    ChildComponent
+    ChildComponent,
+    LightSwitchComponent,
+    ControllerComponent,
+    TrafficLightComponent
   ],
   imports: [
     BrowserModule,
