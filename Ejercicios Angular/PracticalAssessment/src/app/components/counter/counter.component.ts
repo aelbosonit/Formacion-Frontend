@@ -18,25 +18,28 @@ export class CounterComponent {
     "step": 2
   }
 
+  /**
+   * * Cuando se pulsa, llama a una función recursiva que va sumando valores según ciertos parámetros
+   */
   start() {
     this.counter.count = true;
-    this.counting(this.counter.value);
+    this.counting();
   }
 
   /**
-   * RECURSIVIDAD
+   * ! RECURSIVIDAD
    * @param value Es el valor que vamos a volver a sumar una y otra vez
    */
-  counting(value: number) {
+  counting() {
 
     setTimeout(() => {
       if(this.counter.count && this.counter.countUp) { // Si se cuenta para arriba
-        this.counter.value += this.counter.step;
-        this.counting(this.counter.value); // RECURSIVIDAD
+        this.counter.value += this.counter.step; // Súmalo con los saltos (step) que haya en el objeto
+        this.counting(); // RECURSIVIDAD
 
       } else if(this.counter.count && !this.counter.countUp) { // Si se cuenta para abajo
-        this.counter.value -= this.counter.step;
-        this.counting(this.counter.value); // RECURSIVIDAD
+        this.counter.value -= this.counter.step; // Réstalo con los saltos (step) que haya en el objeto
+        this.counting(); // RECURSIVIDAD
       }
     }, 1000);
     
@@ -58,14 +61,6 @@ export class CounterComponent {
     this.counter.countUp = false;
   }
 
-  // TODO formControl -> coger valor de input cada vez que cambie
-  setTo() {
-    this.counter.value;
-  }
-
-  // TODO formControl -> coger valor de input cada vez que cambie
-  step() {
-    this.counter.step;
-  }
+  //TODO formControl -> coger valor de input cada vez que cambie para set y step
 
 }
